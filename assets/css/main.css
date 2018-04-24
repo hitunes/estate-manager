@@ -1,0 +1,153 @@
+html, body{
+    height: 100%;
+    color: #333333;
+}
+#inlineFormInputGroupUsername2, #inlineFormInputGroupPassword2{
+border-color: #007bff;
+}
+.username{
+    width:200px;
+    margin-right: 10px;
+}
+#navbarNav{
+    justify-content: flex-end;
+}
+#navbarNav > button{
+    width: 100px;
+}
+/* .img-height{
+    height: 400px;
+    width: 100%;
+} */
+/* banner */
+.banner{
+    height: 440px;
+    background-image: url("../../assets/img/justin-schuler-253611-unsplash.jpg");
+    background-position: center;
+}
+
+body > header > section.nav__contact > div > div > div{
+    min-height: 69px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+
+body > header > section.nav__contact > div > div > div > ul > li{
+    padding-right: 56px;
+}
+body > header > section.nav__contact > div > div > div > ul > li > a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+} 
+.active__smallnav{
+    color: #2D9CDB !important;
+}
+.contact__banner{
+    height: 440px;
+    background-image: url("../../assets/img/breather-168751-unsplash.jpg");
+    background-position: center;
+}
+.contact__contact{
+    border: 0.25px solid #E5E5E5;
+    margin-top: 80px;
+    min-height: 500px;
+}
+.container__contact{
+margin: 80px 165px;
+}
+.contact__header{
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+body > header > section.contact > div > div > hr{
+    margin: 0 auto;
+    width: 80%;
+}
+.contact__text{
+    padding-left: 100px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+.contact__title{
+   color:  #828282;
+}
+.contact__details{
+   color:  #333333;
+   margin-bottom: 32px;
+}
+
+/* contact us */
+ /* footer */
+footer{
+    min-height: 210px;
+    background-color: #333333;
+}
+body > header > footer > div > ul{
+    list-style: none;
+    padding-top: 42px;
+}
+body > header > footer > div > ul > li{
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    padding-right: 90px;
+}
+.nav-footer{
+    color: white;
+    font-size: 18px;
+}
+body > header > footer > div > ul > li:nth-child(5) > a > img{
+    height: 40px;
+    width: 40px;
+}
+body > header > footer > div > ul > li:nth-child(5) > a{
+    padding-right: 8px;
+}
+body > header > footer > div > div{
+    text-align: center;
+    margin-top: 36px;
+}
+ /* footer */
+
+
+
+
+ /*about us  */
+ .about__banner{
+    height: 440px;
+    background-image: url("../../assets/img/patrick-perkins-340019-unsplash.jpg");
+    background-position: center;
+ }
+    .about__text{
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px 109px;
+        font-size: 18px;
+    }
+ @media(max-width: 425px){
+    .contact__contact{
+        border: 0.25px solid #E5E5E5;
+        margin-top: 80px;
+        min-height: 500px;
+        width: 300px;
+    }
+    .container__contact{
+        margin: 80px 40px;
+        }
+        .contact__text{
+            padding-left: 10px;
+            padding-bottom: 20px;
+            padding-top: 40px;
+        }
+        .about__text{
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 18px;
+        }
+ }
