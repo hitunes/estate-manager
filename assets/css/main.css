@@ -41,9 +41,14 @@ body > header > section.nav__contact > div > div > div > ul > li > a{
     font-weight: bold;
     color: #333333;
 } 
-.active__smallnav{
+body > header > section.nav__contact > div > div > div > ul > li > a:hover{
     color: #2D9CDB !important;
 }
+.active__smallnav{
+    color: #2D9CDB !important;
+    border-bottom: 2px solid #f29948;
+}
+
 .contact__banner{
     height: 440px;
     background-image: url("../../assets/img/breather-168751-unsplash.jpg");
