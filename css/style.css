@@ -208,10 +208,12 @@ body{
 }
 /* Breadcrumb */
 .col-md-12--grey{
+  border-radius: 3px;
   position: relative;
   min-height: 1px;
   background:#cccccc;
   padding-top: 5px;
+  padding-bottom: 5px;
   margin-bottom: 15px;
   margin-left: 15px;
   margin-right: 15px;
@@ -220,7 +222,7 @@ body{
   background:#cccccc;
   color:#333333;
   padding-left: 10px;
-  padding-bottom: 0;
+ margin-bottom: 0;
 }
 
 .breadcrumb a{

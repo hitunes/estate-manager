@@ -2,18 +2,10 @@ html, body{
     height: 100%;
     color: #333333;
 }
-#inlineFormInputGroupUsername2, #inlineFormInputGroupPassword2{
-border-color: #007bff;
-}
-.username{
-    width:200px;
-    margin-right: 10px;
-}
-#navbarNav{
-    justify-content: flex-end;
-}
-#navbarNav > button{
-    width: 100px;
+.btn-payment-home{
+    height: 40px!important;
+    width: 152px!important;
+    text-align: center!important;
 }
 /* .img-height{
     height: 400px;
@@ -25,14 +17,24 @@ border-color: #007bff;
     background-image: url("../../assets/img/justin-schuler-253611-unsplash.jpg");
     background-position: center;
 }
-
+.index__banner{
+    height: 440px;
+    background-image: url("../../assets/img/justin-schuler-253611-unsplash.jpg");
+    background-position: center;
+}
 body > header > section.nav__contact > div > div > div{
     min-height: 69px;
     padding-top: 16px;
     padding-bottom: 16px;
 }
-
-
+.contact__header--payment{
+    min-height: 69px;
+    padding-top: 0!important;
+    padding-bottom: 0 !important;
+}
+body > header > section.nav__contact{
+    border-top: 1px solid #E5E5E5;
+}
 body > header > section.nav__contact > div > div > div > ul > li{
     padding-right: 56px;
 }
@@ -57,10 +59,13 @@ body > header > section.nav__contact > div > div > div > ul > li > a:hover{
 .contact__contact{
     border: 0.25px solid #E5E5E5;
     margin-top: 80px;
+    margin-bottom: 80px;
     min-height: 500px;
 }
 .container__contact{
-margin: 80px 165px;
+display: flex;
+justify-content: center;
+
 }
 .contact__header{
     text-align: center;
@@ -110,11 +115,13 @@ body > header > footer > div > ul > li:nth-child(5) > a > img{
     height: 40px;
     width: 40px;
 }
+
 body > header > footer > div > ul > li:nth-child(5) > a{
     padding-right: 8px;
 }
-body > header > footer > div > div{
-    text-align: center;
+body > header > footer > div:nth-child(2){
+    display: flex;
+    justify-content: center;
     margin-top: 36px;
 }
  /* footer */
@@ -134,25 +141,3 @@ body > header > footer > div > div{
         padding: 40px 109px;
         font-size: 18px;
     }
- @media(max-width: 425px){
-    .contact__contact{
-        border: 0.25px solid #E5E5E5;
-        margin-top: 80px;
-        min-height: 500px;
-        width: 300px;
-    }
-    .container__contact{
-        margin: 80px 40px;
-        }
-        .contact__text{
-            padding-left: 10px;
-            padding-bottom: 20px;
-            padding-top: 40px;
-        }
-        .about__text{
-            margin: 0 auto;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 18px;
-        }
- }
