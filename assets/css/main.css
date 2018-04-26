@@ -1,26 +1,153 @@
 html, body{
     height: 100%;
-    color: #333333;
+    color: #F2F2F2;
 }
-.btn-payment-home{
-    height: 40px!important;
-    width: 152px!important;
-    text-align: center!important;
-}
-/* .img-height{
-    height: 400px;
-    width: 100%;
-} */
 /* banner */
-.banner{
-    height: 440px;
-    background-image: url("../../assets/img/justin-schuler-253611-unsplash.jpg");
-    background-position: center;
+.admin--icon{
+    margin-top: 30px;
+}
+.btn-admin-home{
+    height: 40px!important;
+    width: 164px!important;
+    text-align: center!important;
+    background: none;
+    border: 1px solid white;
+    margin-top: 30px;
+    float: right;
+    border-radius: 4px;
+}
+.btn-admin-text{
+    height: 40px!important;
+    width: 195px!important;
+    text-align: center!important;
+    border-radius: 4px;
+
+}
+.btn--center{
+text-align: center;
+}
+
+.admin--text-big{
+    display: flex;
+   justify-content: center;
+    color: white;
+    font-size: 36px;
+    padding-top: 150px;
+    margin-bottom: 8px;
+    margin-left: 108px;
+    padding-bottom: 0;
+    text-align: right;
+    font-weight: 700;
+}
+.admin--text-small{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
 }
 .index__banner{
-    height: 440px;
-    background-image: url("../../assets/img/justin-schuler-253611-unsplash.jpg");
+    display: flex;
+
+    height: 600px;
+    background-image: url("../../assets/img/grey-skies-street_4460x4460.jpg");
     background-position: center;
+    background-size: cover;
+    background-position: fixed;
+}
+/*banner  */
+
+/* cards */
+.cards{
+    background-color: #f2f2f2;
+    padding-top: 80px;
+}
+.cards--title{
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.cards__row{
+
+    margin: 0 110px;
+    padding-bottom: 30px;
+    
+}
+.cards__cards{
+    color: #333333;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-bottom: 40px;
+}
+.cards__cards--title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+.cards__cards--image{
+    margin-bottom: 17px;
+}
+
+/* cards */
+/* b ills*/
+.bills{
+    background-color: #ffffff;
+    padding-top: 40px;
+}
+.align-self-center{
+    text-align: center;
+    color: #333333;
+}
+.bills__cards--title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.bills--title{
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 80px;
+}
+.cards__cards--image-pay{
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+.bill__card-position{
+    position: relative;
+    top: -62px;
+}
+.bill__card-position-2{
+    position: relative;
+    top: -112px;
+}
+
+
+
+
+
+
+
+
+
+.home--numbers{
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid #2D9CDB;
+    color: #2D9CDB;
+    padding-top: 8px;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    /* margin-right: 32px; */
+    margin-top: 40px;
+}
+.home__cards--title{
+    text-align: center;
 }
 body > header > section.nav__contact > div > div > div{
     min-height: 69px;
@@ -55,6 +182,8 @@ body > header > section.nav__contact > div > div > div > ul > li > a:hover{
     height: 440px;
     background-image: url("../../assets/img/breather-168751-unsplash.jpg");
     background-position: center;
+    background-size: cover;
+    background-position: fixed;
 }
 .contact__contact{
     border: 0.25px solid #E5E5E5;
@@ -134,6 +263,8 @@ body > header > footer > div:nth-child(2){
     height: 440px;
     background-image: url("../../assets/img/patrick-perkins-340019-unsplash.jpg");
     background-position: center;
+    background-size: cover;
+    background-position: fixed;
  }
     .about__text{
         margin: 0 auto;

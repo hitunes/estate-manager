@@ -199,13 +199,6 @@ body{
   display: flex;
   justify-content: center;
 }
-#header-login{
-  background:
-  #333333 ;
-  color:#ffffff;
-  text-align:center;
-  padding:20px 50px;
-}
 /* Breadcrumb */
 .col-md-12--grey{
   border-radius: 3px;
@@ -258,8 +251,7 @@ body{
   
 }
 #footer-login{
-  background:
-  #333333 ;
+
   color:#ffffff;
   text-align:center;
   padding:30px 100px;
