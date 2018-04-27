@@ -2,6 +2,7 @@ html, body{
     height: 100%;
     color: #F2F2F2;
 }
+/* index */
 /* banner */
 .admin--icon{
     margin-top: 30px;
@@ -9,7 +10,6 @@ html, body{
 .btn-admin-home{
     height: 40px!important;
     width: 164px!important;
-    text-align: center!important;
     background: none;
     border: 1px solid white;
     margin-top: 30px;
@@ -19,12 +19,8 @@ html, body{
 .btn-admin-text{
     height: 40px!important;
     width: 195px!important;
-    text-align: center!important;
     border-radius: 4px;
 
-}
-.btn--center{
-text-align: center;
 }
 
 .admin--text-big{
@@ -49,7 +45,6 @@ text-align: center;
 }
 .index__banner{
     display: flex;
-
     height: 600px;
     background-image: url("../../assets/img/grey-skies-street_4460x4460.jpg");
     background-position: center;
@@ -62,21 +57,19 @@ text-align: center;
 .cards{
     background-color: #f2f2f2;
     padding-top: 80px;
+    color: #333333;
 }
 .cards--title{
-    color: #333333;
     font-size: 24px;
-    text-align: center;
     padding-bottom: 40px;
+    font-weight: bold;
 }
 .cards__row{
 
     margin: 0 110px;
     padding-bottom: 30px;
-    
 }
 .cards__cards{
-    color: #333333;
     padding-top: 24px;
     padding-left: 16px;
     padding-bottom: 40px;
@@ -95,10 +88,15 @@ text-align: center;
 .bills{
     background-color: #ffffff;
     padding-top: 40px;
-}
-.align-self-center{
-    text-align: center;
     color: #333333;
+}
+
+.align-self-center-left{
+
+    margin-left: 290px;
+}
+.align-self-center-right{
+    text-align: right;
 }
 .bills__cards--title{
     font-size: 24px;
@@ -106,30 +104,52 @@ text-align: center;
     margin-bottom: 8px;
 }
 .bills--title{
-    color: #333333;
     font-size: 24px;
-    text-align: center;
     padding-bottom: 80px;
+    font-weight: bold;
 }
 .cards__cards--image-pay{
     margin-bottom: 24px;
     cursor: pointer;
 }
+/* .cards__cards--image-pay:hover{
+  background-color: blue;
+} */
 .bill__card-position{
     position: relative;
     top: -62px;
+
 }
 .bill__card-position-2{
     position: relative;
     top: -112px;
 }
+/* bills */
 
-
-
-
-
-
-
+/* forms */
+.form{
+        background-color: #f2f2f2;
+        padding-top: 40px;
+        color: #333333;
+}
+.form--p-text{
+    margin-bottom: 24px;
+}
+.form__container{
+    padding: 0 150px;
+}
+label{
+    padding-left: 18px;
+}
+textarea{
+    margin-bottom: 40px;
+}
+.form-btn{
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+/* forms */
+/* index */
 
 
 .home--numbers{
@@ -226,11 +246,11 @@ footer{
     min-height: 210px;
     background-color: #333333;
 }
-body > header > footer > div > ul{
+body > footer > div > ul{
     list-style: none;
     padding-top: 42px;
 }
-body > header > footer > div > ul > li{
+body >  footer > div > ul > li{
     color: white;
     font-size: 18px;
     display: inline-block;
@@ -240,15 +260,15 @@ body > header > footer > div > ul > li{
     color: white;
     font-size: 18px;
 }
-body > header > footer > div > ul > li:nth-child(5) > a > img{
+body >  footer > div > ul > li:nth-child(5) > a > img{
     height: 40px;
     width: 40px;
 }
 
-body > header > footer > div > ul > li:nth-child(5) > a{
+body >  footer > div > ul > li:nth-child(5) > a{
     padding-right: 8px;
 }
-body > header > footer > div:nth-child(2){
+body >  footer > div:nth-child(2){
     display: flex;
     justify-content: center;
     margin-top: 36px;
@@ -271,4 +291,9 @@ body > header > footer > div:nth-child(2){
         text-align: center;
         padding: 40px 109px;
         font-size: 18px;
+    }
+
+    /* helpers */
+    .text-align--center{
+        text-align: center;
     }
