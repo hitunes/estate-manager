@@ -24,15 +24,14 @@
           <img src="assets/img/home icon.svg" class="admin--icon" height="32px" alt="">
         </a>
       </div>
-      <div>
+  <div>
           <p class="admin--text-big">
               Having Problems Managing Your Property?
             </p>
             <p class="admin--text-small">
               Connect with one of our Estate Managers.
             </p>
-      </div>
-      
+          </div>
       <div class="text-align--center">
         <a href="contact-us.html">
           <button type="button" class="btn btn-primary justify-content-center btn-admin-text text-align--center">Contact us now</button>
@@ -58,7 +57,7 @@
         </div>
         <div class="col-12 col-sm col-md-4 cards__cards">
           <div class="cards__cards--image">
-            <img src="assets/img/mark.svg" height="56px" width="56px" alt="">
+            <img src="assets/img/mark.svg" height="56px" width="40px" alt="">
           </div>
           <h3 class="cards__cards--title">Respond to Queries </h3>
           <p>Lorem ipsum dolor sit amet,
@@ -76,9 +75,7 @@
             <br> magna phasellus
             <br> maecenas nunc pharetra.</p>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -88,9 +85,11 @@
         <div class="row cards__row">
             <div class="col align-self-center text-align--center">
                 <div class="cards__cards--image-pay">
-                    <img src="assets/img/Rectangle 3.svg" height="56px" width="56px" alt="">
+                    <a href="https://bit.ly/2KnaS7A" target="_blank"><img src="assets/img/Rectangle 3.svg" height="56px" width="56px" alt=""></a> 
+
                   </div>
-                <h3 class="bills__cards--title">Paystack</h3>
+                  <h3 class="bills__cards--title"><a href="https://bit.ly/2KnaS7A" target="_blank" class="btn--upload">Paystack</a></h3> 
+
                <p>Pay using paystack</p> 
               </div>
           </div>
@@ -108,7 +107,36 @@
                   <div class="cards__cards--image-pay">
                       <img src="assets/img/money-transfer icon.svg" height="56px" width="56px" alt="">
                     </div>
-                  <h3 class="bills__cards--title">Mobile Transfers</h3>
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn--upload" data-toggle="modal" data-target="#exampleModal1">
+  <h3 class="bills__cards--title">Mobile Transfers</h3>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><strong>Payment details</strong> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <strong>
+            Bank Details 
+         </strong> <br>
+        Bank Name: Exccess Bank <br>
+        Acct Name: E.M Solutions <br>
+        Acct Number: 0011223344 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+                 
                  <p>Transfer bills using mobile <br>
                     phones.</p> 
                 </div>
@@ -118,9 +146,41 @@
                     <div class="cards__cards--image-pay">
                         <img src="assets/img/upload.svg" height="56px" width="56px" alt="">
                       </div>
-                    <h3 class="bills__cards--title">Upload files</h3>
-                   <p>Send the proof of payment <br>
-                      to payments@emsolutions.com</p> 
+                      <!-- Button trigger modal -->
+<button type="button" class="btn btn--upload" data-toggle="modal" data-target="#exampleModal">
+  <h3 class="bills__cards--title">Upload files</h3>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload files</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+                    
+                   <p>Send the proof of payment</p> 
                   </div>
               </div>
           </div>
@@ -132,41 +192,41 @@
     <p class="text-align--center form--p-text">Please note that you can only use this section if you are a registered customer/tenant.</p>
 <div class="container form__container">
   <div class="row">
-<div class="col-12 col-sm-6 col-md-6">
+      <div class="col-12 col-sm-3 col-md-6">
+          <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Fullname">
+            </div>
+            </div>
+<div class="col-12 col-sm-3 col-md-6">
     <div class="form-group">
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-6">
-      <div class="form-group">
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Fullname">
-        </div>
-        </div>
-<div class="col-12 col-sm-6 col-md-6">
+      
+<div class="col-12 col-sm-3 col-md-6">
     <div class="form-group">
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estate name">
       </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-6">
+      <div class="col-12 col-sm-3 col-md-6">
       <div class="form-group">
           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apartment House No">
         </div>
         </div>
-
-        <label class="form--label" for="exampleInputPassword1">Complains/queries/suggestion</label>
-      <div class="col-12 col-sm-6 col-md-12">
-      <div class="form-group">
-          <textarea name="message" id="" cols="117" rows="5"></textarea>
-        </div>
+      <div class="col-12 col-sm-12 col-md-12">
+          <div class="form-group">
+              <label for="exampleFormControlTextarea1">Complains/queries/suggestion</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
         </div>
           <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary form-btn" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary form-btn" data-toggle="modal" data-target="#exampleModal2">
     Send Message
   </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">

@@ -24,21 +24,16 @@ html, body{
 }
 
 .admin--text-big{
-    display: flex;
-   justify-content: center;
+ 
     color: white;
     font-size: 36px;
-    padding-top: 150px;
+    /* padding-top: 150px; */
     margin-bottom: 8px;
-    margin-left: 108px;
+    /* margin-left: 108px; */
     padding-bottom: 0;
-    text-align: right;
     font-weight: 700;
 }
 .admin--text-small{
-    display: flex;
-   justify-content: center;
-   align-items: center;
     color: white;
     font-size: 24px;
     font-weight: 600;
@@ -46,7 +41,7 @@ html, body{
 .index__banner{
     display: flex;
     height: 600px;
-    background-image: url("../../assets/img/grey-skies-street_4460x4460.jpg");
+    background-image: url("../../assets/img/Banner.png");
     background-position: center;
     background-size: cover;
     background-position: fixed;
@@ -85,6 +80,21 @@ html, body{
 
 /* cards */
 /* b ills*/
+.btn--upload{
+    background: white!important;
+    padding: 0!important;
+    color: #333333!important;
+    text-decoration: underline;
+}
+.btn--upload.focus, .btn--upload:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem white;
+}
+.btn--upload:hover {
+    background: #2D9CDB!important;
+   color: white!important;
+}
+
 .bills{
     background-color: #ffffff;
     padding-top: 40px;
