@@ -231,11 +231,11 @@ body{
 .login_row{
   display: flex;
   justify-content: center;
-  margin-right: 46px;
+  
 }
 .login__banner{
   height: 700px;
-  background-image: url("../../assets/img/login-bg.jpg");
+  background-image: url("../../estate-manager/assets/img/login-bg.jpg");
   background-size: cover;
 }
 ::placeholder{
@@ -251,7 +251,6 @@ body{
 }
 .well--login{
   padding: 60px 100px;
-  width: 496px;
   min-height: 20px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
@@ -321,3 +320,4 @@ body{
 }
 
 /* btn */
+
