@@ -289,20 +289,7 @@ body{
   background-color: #0264ce!important;
   color: #fff;
 }
-.login-btn-home{
-  height: 40px!important;
-  width: 184px!important;
-  background: none;
-  border: 1px solid white;
-  margin-top: 30px;
-  float: right;
-  border-radius: 4px;
-  font-size: 18px;
-}
-.login-btn-home:hover{
-  background-color: #0264ce!important;
-  border: none;
-}
+
 .admin--icon{
   margin-top: 110px;
   text-align: center;
@@ -333,4 +320,4 @@ body{
   padding:30px 100px;
 }
 
-
+/* btn */

@@ -4,16 +4,20 @@ html, body{
 }
 /* index */
 /* banner */
+.admin__banner--btn{
+    display: flex;
+    justify-content: space-between;
+}
 .admin--icon{
     margin-top: 30px;
 }
+
 .btn-admin-home{
     height: 40px!important;
     width: 164px!important;
     background: none;
     border: 1px solid white;
     margin-top: 30px;
-    float: right;
     border-radius: 4px;
 }
 .btn-admin-text{
@@ -24,12 +28,9 @@ html, body{
 }
 
 .admin--text-big{
- 
     color: white;
     font-size: 36px;
-    /* padding-top: 150px; */
     margin-bottom: 8px;
-    /* margin-left: 108px; */
     padding-bottom: 0;
     font-weight: 700;
 }
@@ -44,7 +45,7 @@ html, body{
     background-image: url("../../assets/img/Banner.png");
     background-position: center;
     background-size: cover;
-    background-position: fixed;
+    background-attachment: fixed;
 }
 /*banner  */
 
@@ -91,8 +92,9 @@ html, body{
     box-shadow: 0 0 0 0.2rem white;
 }
 .btn--upload:hover {
-    background: #2D9CDB!important;
-   color: white!important;
+    /* background: #2D9CDB!important;
+   color: white!important; */
+   text-decoration: none!important;
 }
 
 .bills{
@@ -146,8 +148,9 @@ html, body{
     margin-bottom: 24px;
 }
 .form__container{
-    padding: 0 150px;
+    max-width: 600px;
 }
+
 label{
     padding-left: 18px;
 }
@@ -306,4 +309,10 @@ body >  footer > div:nth-child(2){
     /* helpers */
     .text-align--center{
         text-align: center;
+    }
+    .text-align--right{
+        text-align: right;
+    }
+    .text-align--left{
+        text-align: left;
     }

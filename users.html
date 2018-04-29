@@ -24,9 +24,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/Logo 1.svg" height="25px" alt="">
-        </a>
+        <a href="index.html">
+            <img src="assets/img/home-blue.svg"  height="32px" alt="">
+          </a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -57,48 +57,45 @@
   </nav>
 
   <header id="header">
-    
+
   </header>
 
   <section id="breadcrumb">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12--grey">
-            <div class="row">
-              <div class="col-md-3">
-                <ol class="breadcrumb">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12--grey">
+          <div class="row">
+            <div class="col-md-3">
+              <ol class="breadcrumb">
+                <li>
+                  <a href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="active">Messages</li>
+              </ol>
+            </div>
+            <div class="col-md-9">
+              <div class="dropdown create">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="true">
+                  Create Content
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   <li>
-                    <a href="dashboard.html">Dashboard</a>
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter1">Add House</a>
                   </li>
-                  <li class="active">Messages</li>
-                </ol>
-              </div>
-              <div class="col-md-9">
-                <div class="dropdown create">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="true">
-                    Create Content
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li>
-                      <a type="button" data-toggle="modal" data-target="#addPage">Add Estate</a>
-                    </li>
-                    <li>
-                      <a href="#">Add House</a>
-                    </li>
-                    <li>
-                      <a href="#">Add Tenant</a>
-                    </li>
-                  </ul>
-                </div>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Add Tenant</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-  
         </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
   <section id="main">
     <div class="container">
@@ -121,21 +118,6 @@
               <span class="badge">301</span>
             </a>
           </div>
-
-          <!-- <div class="well">
-            <h4>Disk Space Used</h4>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                70%
-              </div>
-            </div>
-            <h4>Bandwidth Used </h4>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                30%
-              </div>
-            </div>
-          </div> -->
         </div>
         <div class="col-md-9">
           <!-- Website Overview -->
@@ -150,52 +132,25 @@
                 </div>
               </div>
               <br>
-              <table class="table table-striped table-hover">
+              <table class="table table-striped table-hover table-responsive">
                 <tr>
-                  <th>Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
                   <th>Email</th>
-                  <th>Joined</th>
+                  <th>Estate</th>
+                  <th>Apartment No</th>
                   <th>Message</th>
                   <th></th>
                 </tr>
                 <tr>
-                  <td>Joshua Edigbe</td>
-                  <td>joshuaedigbe@gmail.com</td>
-                  <td>April 10, 2018</td>
-                  <td>My pump is not wrorking </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
                   <td>
-                    <a class="btn btn-default" href="edit.html">view</a>
-                    <a class="btn btn-danger" href="#">Delete</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Itunu Adekoye</td>
-                  <td>itunsade@gmail.com</td>
-                  <td>April 11, 2018</td>
-                  <td>My pump is not wrorking </td>
-                  <td>
-                    <a class="btn btn-default" href="edit.html">view</a>
-                    <a class="btn btn-danger" href="#">Delete</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Temitope Ojewale</td>
-                  <td>temioje@gmail.comcom</td>
-                  <td>April 13, 2018</td>
-                  <td>My pump is not wrorking </td>
-                  <td>
-                    <a class="btn btn-default" href="edit.html">view</a>
-                    <a class="btn btn-danger" href="#">Delete</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Sunday Kadiri</td>
-                  <td>sundayboxer@yahoo.com</td>
-                  <td>April 14, 2018</td>
-                  <td>My pump is not wrorking </td>
-                  <td>
-                    <a class="btn btn-default" href="edit.html">view</a>
-                    <a class="btn btn-danger" href="#">Delete</a>
+                    <a class="btn btn-success" href="#" data-toggle="modal" data-target="#exampleModal">Reply</a>
                   </td>
                 </tr>
               </table>
@@ -207,71 +162,158 @@
     </div>
   </section>
 
-  <footer id="footer">
-      <span>
-          <a href="index.html">
-              <img src="assets/img/home icon.svg"  height="32px" alt="">
-            </a>
-      </span>
-    <p>
-     Design and developed by: Hitunes &bull; 2018
-    </p>
-  </footer>
+
 
   <!-- Modals -->
 
   <!-- Add Page -->
-  <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form>
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">Add Page</h4>
-          </div>
-          <div class="modal-body">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Add Tenant</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
             <div class="form-group">
-              <label>Page Title</label>
-              <input type="text" class="form-control" placeholder="Page Title">
-            </div>
-            <div class="form-group">
-              <label>Page Body</label>
-              <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Published
-              </label>
+              <label for="exampleInputEmail1">Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Fullname">
             </div>
             <div class="form-group">
-              <label>Meta Tags</label>
-              <input type="text" class="form-control" placeholder="Add Some Tags...">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
-              <label>Meta Description</label>
-              <input type="text" class="form-control" placeholder="Add Meta Description...">
+              <label for="exampleFormControlSelect1">Estate</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Chevron</option>
+                <option>Ivy</option>
+                <option>Park View</option>
+                <option>Banana</option>
+                <option>GRA</option>
+              </select>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
-          </div>
-        </form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Apartment/flat No</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Apartment/Flat No">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Rent Start</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Rent End</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Utilities Start Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Utilities End Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Add House</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Estate</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Estate Name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">House/Apartment No</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="House Apartment">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1"> Apartment Info</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Apartment Information">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-body message">
+                <p class="text-center">New Message</p>
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="to" class="col-sm-1 control-label">To:</label>
+                    <div class="col-sm-11">
+                      <input type="email" class="form-control select2-offscreen" id="to" placeholder="Type email" tabindex="-1">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="cc" class="col-sm-1 control-label">CC:</label>
+                    <div class="col-sm-11">
+                      <input type="email" class="form-control select2-offscreen" id="cc" placeholder="Type email" tabindex="-1">
+                    </div>
+                  </div>
 
-  <script>
-    CKEDITOR.replace('editor1');
-  </script>
+                </form>
 
-  <!-- Bootstrap core JavaScript
+                <div class="col-sm-11 col-sm-offset-1">
+
+                  <div class="btn-toolbar" role="toolbar">
+
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" name="body" rows="12" placeholder="Click here to reply"></textarea>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
+            <button type="button" class="btn btn-primary">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      CKEDITOR.replace('editor1');
+    </script>
+
+    <!-- Bootstrap core JavaScript
     ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
