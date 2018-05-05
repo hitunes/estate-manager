@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,23 +28,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="index.html">
+        <a href="index.php">
             <img src="assets/img/home-blue.svg"  height="32px" alt="">
           </a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li>
-            <a href="dashboard.html">Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
           </li>
           <li>
-            <a href="pages.html">Houses</a>
+            <a href="pages.php">Houses</a>
           </li>
           <li>
-            <a href="posts.html">Tenants</a>
+            <a href="posts.php">Tenants</a>
           </li>
           <li class="active">
-            <a href="users.html">Messages</a>
+            <a href="users.php">Messages</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -48,7 +52,7 @@
             <a href="#">Welcome, Admin</a>
           </li>
           <li>
-            <a href="login.html">Logout</a>
+            <a href="login.php">Logout</a>
           </li>
         </ul>
       </div>
@@ -68,26 +72,15 @@
             <div class="col-md-3">
               <ol class="breadcrumb">
                 <li>
-                  <a href="dashboard.html">Dashboard</a>
+                  <a href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="active">Messages</li>
               </ol>
             </div>
             <div class="col-md-9">
               <div class="dropdown create">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="true">
-                  Create Content
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li>
-                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter1">Add House</a>
-                  </li>
-                  <li>
-                    <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Add Tenant</a>
-                  </li>
-                </ul>
+                
+               
               </div>
             </div>
           </div>
@@ -102,20 +95,77 @@
       <div class="row">
         <div class="col-md-3">
           <div class="list-group">
-            <a href="dashboard.html" class="list-group-item active main-color-bg">
+            <a href="dashboard.php" class="list-group-item active main-color-bg">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
             </a>
-            <a href="pages.html" class="list-group-item">
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $sql = "SELECT * FROM houses";
+
+            if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+              $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+              mysqli_free_result($result);
+            }
+
+            mysqli_close($con);
+            ?>
+            <a href="pages.php" class="list-group-item">
               <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Houses
-              <span class="badge">15</span>
+              <span class="badge"><?php echo "$rowcount" ?></span>
             </a>
-            <a href="posts.html" class="list-group-item">
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $sql = "SELECT * FROM tenants";
+
+            if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+              $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+              mysqli_free_result($result);
+            }
+
+            mysqli_close($con);
+            ?>
+            <a href="posts.php" class="list-group-item">
               <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tenants
-              <span class="badge">55</span>
+              <span class="badge"><?php echo "$rowcount" ?></span>
             </a>
-            <a href="users.html" class="list-group-item">
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $sql = "SELECT * FROM comments";
+
+            if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+              $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+              mysqli_free_result($result);
+            }
+
+            mysqli_close($con);
+            ?>
+            <a href="users.php" class="list-group-item">
               <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Messages
-              <span class="badge">301</span>
+              <span class="badge"><?php echo "$rowcount" ?></span>
             </a>
           </div>
         </div>
@@ -134,7 +184,8 @@
               <br>
               <table class="table table-striped table-hover table-responsive">
                 <tr>
-                  <th>Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
                   <th>Email</th>
                   <th>Estate</th>
                   <th>Apartment No</th>
@@ -142,14 +193,42 @@
                   <th></th>
                 </tr>
                 <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <a class="btn btn-success" href="#" data-toggle="modal" data-target="#exampleModal">Reply</a>
-                  </td>
+                <?php  include('server1.php'); ?>
+                 <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "e-reg";
+    
+    // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+                if ($conn->connect_error) {
+                  die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT id, firstname, lastname, email, estatename, apartment, mmessage FROM comments order by id desc";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                  $index = 0;
+                  
+        // output data of each row
+                  while ($row = $result->fetch_assoc()) {
+                    $v = $row["id"];
+                   
+                    echo '<tr> <td>' . $row["firstname"] . "</td>" . "<td>" . $row["lastname"] . "</td>" . "<td>" . $row["email"] . "</td>" . "<td>" . $row["estatename"] . "</td>" . "<td>" . $row["apartment"] . "</td>" . "<td>" . $row["mmessage"] . "</td>" . "<td>" . "<a class='btn btn-success btn-sm' href='#' data-toggle='modal' data-target='#exampleModal".$index."'>Reply</a>" . "</td>  " . "<td>" . "<a href='server1.php?del=$v'   class='btn btn-danger btn-sm'>Delete</a>" . "</td>";
+                    $index++;
+                  }
+                } else {
+                  echo "0 results";
+                }
+
+                $conn->close();
+
+
+                ?> 
+                  
                 </tr>
               </table>
             </div>
@@ -159,6 +238,13 @@
       </div>
     </div>
   </section>
+
+
+
+
+
+
+
 
 
 
@@ -252,57 +338,86 @@
     </div>
   </div>
   <!-- Button trigger modal -->
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"><strong> Message</strong></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="col-md-9">
-            <div class="panel panel-default">
-              <div class="panel-body message">
-                <p class="text-center">New Message</p>
-                <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                    <label for="to" class="col-sm-1 control-label">To:</label>
-                    <div class="col-sm-11">
-                      <input type="email" class="form-control select2-offscreen" id="to" placeholder="Type email" tabindex="-1">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="cc" class="col-sm-1 control-label">CC:</label>
-                    <div class="col-sm-11">
-                      <input type="email" class="form-control select2-offscreen" id="cc" placeholder="Type email" tabindex="-1">
-                    </div>
-                  </div>
+  <?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "e-reg";
 
-                </form>
+// Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
 
-                <div class="col-sm-11 col-sm-offset-1">
+  $sql = "SELECT id, firstname, lastname, email, estatename, apartment, mmessage FROM comments order by id desc";
+  $result = $conn->query($sql);
 
-                  <div class="btn-toolbar" role="toolbar">
-
+  if ($result->num_rows > 0) {
+    $indexx = 0;
+// output data of each row
+  while ($row = $result->fetch_assoc()) {
+  ?>
+    <div class="modal fade" id="exampleModal<?php echo $indexx ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><strong> Message</strong></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body message">
+                  <p class="text-center"><strong>New Message</strong> </p>
+                  <form class="form-horizontal" role="form">
                     <div class="form-group">
-                      <textarea class="form-control" id="message" name="body" rows="12" placeholder="Click here to reply"></textarea>
+                      <label for="to" class="col-sm-1 control-label">To:</label>
+                    
+                      <div class="col-sm-11">
+                        <input type="email" class="form-control select2-offscreen" id="to" placeholder='<?php echo $row["email"] ?>' tabindex="-1">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="cc" class="col-sm-1 control-label">CC:</label>
+                      <div class="col-sm-11">
+                        <input type="email" class="form-control select2-offscreen" id="cc" placeholder="Type email" tabindex="-1">
+                      </div>
                     </div>
 
+                  </form>
+
+                  <div class="col-sm-11 col-sm-offset-1">
+
+                    <div class="btn-toolbar" role="toolbar">
+
+                      <div class="form-group">
+                        <textarea class="form-control" id="message" name="body" rows="12" placeholder="Click here to reply"></textarea>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
-            <button type="button" class="btn btn-primary">Send Message</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Discard</button>
+              <button type="button" class="btn btn-primary">Send Message</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  <?php
+  $indexx++;
+}
+} 
+  ?>
+  <!-- Modal -->
+  
     <script>
       CKEDITOR.replace('editor1');
     </script>
@@ -315,3 +430,4 @@
 </body>
 
 </html>
+

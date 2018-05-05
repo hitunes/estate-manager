@@ -12,10 +12,10 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="assets/img/Logo 1.svg" height="32px" alt="">
       </a>
-     <a href="index.html"><button type="button" class="btn btn-primary justify-content-end btn-payment-home">Home</button></a> 
+     <a href="index.php"><button type="button" class="btn btn-primary justify-content-end btn-payment-home">Home</button></a> 
     </div>
   </nav>
   <section class="nav__contact">
@@ -57,7 +57,7 @@
       <div class="container__contact">
          <ul>
            <li>
-              <a class="nav-footer" href="about-us.html">About Us</a>
+              <a class="nav-footer" href="about-us.php">About Us</a>
             </li>
            <li>
               <a class="nav-footer" href="#">Contact Us</a>

@@ -26,7 +26,7 @@
           <a class="nav-link active__smallnav" href="#">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active " href="contact-us.html">Contact Us</a>
+          <a class="nav-link active " href="contact-us.php">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">FAQ's</a>
@@ -68,7 +68,7 @@
               <a class="nav-footer" href="#">About Us</a>
             </li>
            <li>
-              <a class="nav-footer" href="contact-us.html">Contact Us</a>
+              <a class="nav-footer" href="contact-us.php">Contact Us</a>
             </li>
            <li>
               <a class="nav-footer" href="#">FAQ's</a>

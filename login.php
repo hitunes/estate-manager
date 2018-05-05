@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,21 +16,22 @@
   <section class="login__banner">
           
               <span class="admin--icon-span">
-                  <a href="index.html">
+                  <a href="index.php">
                       <img src="assets/img/home icon.svg" class="admin--icon" height="32px" alt="">
                     </a>
               </span>
             <div class="row login_row">
               <div class="col-md-4">
-                <form id="login" action="dashboard.html" class="well--login">
+                <form id="login" action="login.php"  method = "post" class="well--login">
+                <?php include('errors.php'); ?>
                     <h3 class="cards--title">Welcome Back!</h3>
                       <div class="form-group">
-                        <input type="text" class="form-control--login" placeholder="Email">
+                        <input type="text" class="form-control--login" placeholder="Email" name = "username">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control--login" placeholder="Password">
+                        <input type="password" class="form-control--login" placeholder="Password" name = "password">
                       </div>
-                      <button type="submit" class="btn btn-primary--login btn-block">Login</button>
+                      <button type="submit" class="btn btn-primary--login btn-block" name="login_user">Login</button>
                   </form>
               </div>
             </div>

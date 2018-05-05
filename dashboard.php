@@ -24,23 +24,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="index.html">
-            <img src="assets/img/home-blue.svg"  height="32px" alt="">
+        <a href="index.php">
+            <img src="assets/img/Estate management icon blue.svg"  height="32px" alt="">
           </a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active">
-            <a href="dashboard.html">Dashboard</a>
+            <a href="dashboard.php">Dashboard</a>
           </li>
           <li>
-            <a href="pages.html">Houses</a>
+            <a href="pages.php">Houses</a>
           </li>
           <li>
-            <a href="posts.html">Tenants</a>
+            <a href="posts.php">Tenants</a>
           </li>
           <li>
-            <a href="users.html">Messages</a>
+            <a href="users.php">Messages</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -48,7 +48,7 @@
             <a href="#">Welcome, Admin</a>
           </li>
           <li>
-            <a href="login.html">Logout</a>
+            <a href="login.php">Logout</a>
           </li>
         </ul>
       </div>
@@ -68,13 +68,13 @@
             <div class="col-md-3">
               <ol class="breadcrumb">
                 <li>
-                  <a href="dashboard.html">Dashboard</a>
+                  <a href="dashboard.php">Dashboard</a>
                 </li>
               </ol>
             </div>
             <div class="col-md-9">
               <div class="dropdown create">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                <!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="true">
                   Create Content
                   <span class="caret"></span>
@@ -86,12 +86,11 @@
                   <li>
                       <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Add Tenant</a>
                     </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -101,20 +100,79 @@
       <div class="row">
         <div class="col-md-3">
           <div class="list-group">
-            <a href="dashboard.html" class="list-group-item active ">
+            <a href="dashboard.php" class="list-group-item active ">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
             </a>
-            <a href="pages.html" class="list-group-item">
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $sql = "SELECT * FROM houses";
+
+            if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+              $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+              mysqli_free_result($result);
+            }
+
+            mysqli_close($con);
+            ?>
+            <a href="pages.php" class="list-group-item">
               <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Houses
-              <span class="badge">15</span>
+              <span class="badge"><?php echo "$rowcount" ?></span>
             </a>
-            <a href="posts.html" class="list-group-item">
+
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $sql = "SELECT * FROM tenants";
+
+            if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+              $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+              mysqli_free_result($result);
+            }
+
+            mysqli_close($con);
+            ?>
+            <a href="posts.php" class="list-group-item">
               <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Tenants
-              <span class="badge">55</span>
+              <span class="badge"><?php echo "$rowcount" ?></span>
             </a>
-            <a href="users.html" class="list-group-item">
+
+            <?php
+            $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+            if (mysqli_connect_errno()) {
+              echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $sql = "SELECT * FROM comments";
+
+            if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+              $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+              mysqli_free_result($result);
+            }
+
+            mysqli_close($con);
+            ?>
+            <a href="users.php" class="list-group-item">
               <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Messages
-              <span class="badge">301</span>
+              <span class="badge"><?php echo "$rowcount" ?></span>
             </a>
           </div>
         </div>
@@ -124,25 +182,82 @@
             <div class="panel-heading main-color-bg">
               <h3 class="panel-title">Estates Overview</h3>
             </div>
-            <div class="panel-body">
-              <div class="col-md-4">
+            <div class="panel-body ">
+              <div class="col-md-4 ">
                 <div class="well dash-box">
+                <?php
+                $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+                if (mysqli_connect_errno()) {
+                  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+
+                $sql = "SELECT * FROM tenants";
+
+                if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+                  $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+                  mysqli_free_result($result);
+                }
+
+                mysqli_close($con);
+                ?>
                   <h2>
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 42</h2>
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo "$rowcount" ?></h2>
                   <h4>Tenants</h4>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="well dash-box">
+                <?php
+                $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+                if (mysqli_connect_errno()) {
+                  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+
+                $sql = "SELECT * FROM houses";
+
+                if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+                  $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+                  mysqli_free_result($result);
+                }
+
+                mysqli_close($con);
+                ?>
                   <h2>
-                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 7</h2>
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span> <?php echo "$rowcount" ?></h2>
                   <h4>Houses</h4>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-4 ">
                 <div class="well dash-box">
+                <?php
+                $con = mysqli_connect("localhost", "root", "", "e-reg");
+// Check connection
+                if (mysqli_connect_errno()) {
+                  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+
+                $sql = "SELECT * FROM comments";
+
+                if ($result = mysqli_query($con, $sql)) {
+  // Return the number of rows in result set
+                  $rowcount = mysqli_num_rows($result);
+  // echo "number of rows: ",$rowcount;
+  // Free result set
+                  mysqli_free_result($result);
+                }
+
+                mysqli_close($con);
+                ?>
                   <h2>
-                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> 55</h2>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <?php echo "$rowcount" ?></h2>
                   <h4>Messages</h4>
                 </div>
               </div>
@@ -168,29 +283,36 @@
                   <th>Joined</th>
                 </tr>
                 <tr>
-                  <td>Joshua Edigbe</td>
-                  <td>joshuaedigbe@gmail.com</td>
-                  <td>April 10, 2018</td>
-                </tr>
-                <tr>
-                  <td>Itunu Adekoye</td>
-                  <td>itunsade@gmail.com</td>
-                  <td>April 10, 2018</td>
-                </tr>
-                <tr>
-                  <td>Temitope Ojewale</td>
-                  <td>temioje@gmail.com</td>
-                  <td>April 11, 2018</td>
-                </tr>
-                <tr>
-                  <td>Sunday Kadiri</td>
-                  <td>sundayboxer@yahoo.com</td>
-                  <td>April 11, 2018</td>
-                </tr>
-                <tr>
-                  <td>Ozichukwu Ezike</td>
-                  <td>valozichukwu@gmail.com</td>
-                  <td>April 13, 2018</td>
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "e-reg";
+    
+    // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+                if ($conn->connect_error) {
+                  die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT id,namee, email, estate, apartno, rentstar, rentend, utistar, utiend FROM tenants order by id DESC";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+        // output data of each row
+                  while ($row = $result->fetch_assoc()) {
+                    echo '<tr> <td>' . $row["namee"] . "</td>" . "<td>" . $row["email"] . "</td>" . "</td>" . "<td>" . $row["rentstar"] . "</td>";
+
+                  }
+                } else {
+                  echo "0 results";
+                }
+
+                $conn->close();
+
+
+                ?>
                 </tr>
               </table>
             </div>
@@ -199,17 +321,6 @@
       </div>
     </div>
   </section>
-
-  <footer id="footer">
-      <span>
-          <a href="index.html">
-              <img src="assets/img/home icon.svg"  height="32px" alt="">
-            </a>
-      </span>
-    <p>
-     E.M Solutions &bull; 2018
-    </p>
-  </footer>
 
   <!-- Modals -->
 
@@ -300,9 +411,6 @@
             </div>
           </div>
         </div>
-  <script>
-    CKEDITOR.replace('editor1');
-  </script>
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
